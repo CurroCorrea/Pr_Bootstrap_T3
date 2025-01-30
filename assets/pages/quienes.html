@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/quienes.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="col-12 text-center text-light" style="background: black;"> 
+    <small>A Webflow membership template for resource websites. 
+        <a href="#" class="text-light">See all templates ></a></small> 
+  </div> 
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark justify-content-center sticky-top" style="background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); height: 100px;">
+   <div class="container mx-5">
+     <a class="navbar-brand" href="#">
+       <img src="../images/miLogo.png" alt="Profile" class="img-fluid" width="60rem" height="40rem"> <span class="fw-bold">MG </span> 
+     </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse rounded-pill" id="navbarNav">
+    <!-- Menu colapsao -->
+       <ul class="navbar-nav ms-auto text-center">
+         <li class="nav-item"><a class="nav-link mx-2" href="../../index.html">Inicio</a></li>
+         <li class="nav-item"><a class="nav-link mx-2" href="../pages/quienes.html">Quiénes somos</a></li>
+         <li class="nav-item"><a class="nav-link mx-2" href="../pages/product.html">Productos</a></li>
+         <li class="nav-item"><a class="nav-link mx-2" href="../pages/contact.html">Contacto</a></li>
+         <li class="nav-item"><a class="nav-link mx-2" href="../pages/nextgadgets.html">Próximos Gadgets</a></li>
+       </ul>
+     </div>
+   </div>
+ </nav> 
+
+ <!-- Video de fondo -->
+ <video class="background-video" id="background-video" muted loop>
+  <source src="../video/gadgets.mp4" type="video/mp4">
+  Tu navegador no soporta la reproducción de video.
+</video>
+<!-- Audio de fondo -->
+  <audio id="background-audio" loop>
+      <source src="../video/audio.mp3" type="audio/mp3">
+      Tu navegador no soporta la reproducción de audio.
+  </audio>
+
+  <!-- Botón para activar el audio -->
+  <button class="audio-button" onclick="playMedia()">PLAY</button>
+
+         <!-- Contenido adicional debajo del video -->
+<section class="extra-content">
+  <div class="container-fluid">
+      <div class="row">
+          <h1 class="fw-bold fs-1">En cuanto a nosotros:</h1>
+          <p class="fs-6">Somos una empresa joven y apasionada por la tecnología, dedicada a ofrecer los gadgets más innovadores del mercado. 
+            Nos especializamos no solo en su venta, sino también en proporcionar servicios de instalación personalizados 
+            para que nuestros clientes puedan disfrutar al máximo de sus dispositivos.
+            Además, nos encanta compartir nuestro conocimiento a través de análisis y reviews 
+            detalladas, ayudándote a tomar decisiones informadas sobre los productos más recientes y revolucionarios del mundo de la tecnología.<br>
+            Aquí te dejamos con un video sobre lo que hacemos:
+            </p>
+      </div>
+  </div>
+</section>
+
+    
+
+    
+<script>
+  function playMedia() {
+  const audio = document.getElementById('background-audio');
+  const video = document.getElementById('background-video');
+
+  video.play().catch(error => {
+      console.error("Error al reproducir el video:", error);
+  });
+
+  audio.play().catch(error => {
+      console.error("Error al reproducir el audio:", error);
+  });
+
+  document.querySelector('.audio-button').style.display = 'none'; // Oculta el botón después de la reproducción
+}
+
+</script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>

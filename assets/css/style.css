@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    overflow-x:hidden ;
+}
+
+
+/*Navbar*/
+
+@media (max-width: 991.98px) { /* Para pantallas menores a 'md' */
+    
+    .navbar-collapse.show {
+      background-color: black; /* Fondo negro solo cuando el menú está desplegado */
+      transition: background-color 0.3s ease-in-out; /* Transición suave (opcional) */
+    }
+    .navbar-collapse.show .nav-link {
+        color: white !important; /* Cambia el color de las letras a blanco */
+        transition: color 0.3s ease-in-out; /* Transición suave del color de texto */
+      }
+  
+  }
+
+  /* INICIO */
+
+/* Estilo del contenedor de la imagen */
+#imagen {
+  overflow: hidden; /* Evita que la imagen se salga del contenedor */
+  position: relative; /* Necesario para posicionar la imagen de forma absoluta */
+  max-width: 500px; /* Ajusta el ancho máximo del contenedor */
+  height: 500px; /* Altura fija del contenedor */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Imagen base */
+#imagen img {
+  overflow: hidden;
+  position: absolute; /* La imagen no afecta las dimensiones del contenedor */
+  top: 0;
+  left: 0;
+  width: 100%; /* La imagen ocupa el ancho del contenedor */
+  height: 100%; /* La imagen ocupa la altura del contenedor */
+  max-height: 100%;
+  transition: transform 0.5s ease; /* Suaviza el efecto de zoom */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente dentro del contenedor */
+}
+
+/* Efecto de zoom al pasar el cursor */
+#imagen:hover img {
+  transform: scale(1.2); /* Escala la imagen al 120% */
+}
+
+
+  #whoWeAreBtn.hover {
+    background-color: #f39923; /* Cambiar color de fondo al hacer hover */
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+#whoWeAreBtn {
+  transition: background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+  /* CARROUSEL */
+
+  #carouselExampleInterval .carousel-item {
+    height: 60vh; /* Ocupa el 60% del alto de la ventana */
+    background: #000; /* Fondo negro mientras carga la imagen */
+  }
+  #carouselExampleInterval .carousel-item img {
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100%; /* Ajusta la altura al contenedor */
+  }
+
+  /*CALL TO ACTION BUTTON*/
+
+ /*CALL TO ACTION BUTTON*/
+.footer-top .cta-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+                       "bt-4 bt-5 bt-6";
+  position: relative;
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-top .cta-button-container:active {
+  transform: scale(0.95);
+}
+
+.footer-top .cta-button-container .hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.footer-top .cta-button-container .bt-1 {
+  grid-area: bt-1;
+}
+
+.footer-top .cta-button-container .bt-2 {
+  grid-area: bt-2;
+}
+
+.footer-top .cta-button-container .bt-3 {
+  grid-area: bt-3;
+}
+
+.footer-top .cta-button-container .bt-4 {
+  grid-area: bt-4;
+}
+
+.footer-top .cta-button-container .bt-5 {
+  grid-area: bt-5;
+}
+
+.footer-top .cta-button-container .bt-6 {
+  grid-area: bt-6;
+}
+
+.footer-top .cta-button-container .bt-1:hover ~ a {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-1:hover ~ a::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-3:hover ~ a {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-3:hover ~ a::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-4:hover ~ a {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-4:hover ~ a::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-6:hover ~ a {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.footer-top .cta-button-container .bt-6:hover ~ a::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.footer-top .cta-button-container .hover:hover ~ a::before {
+  background: transparent;
+}
+
+.footer-top .cta-button-container .hover:hover ~ a::after {
+  content: "Go";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+.footer-top .cta-button {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-top .cta-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.footer-top .cta-button::after {
+  content: "Products";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+
+/*FOOTER*/
+
+footer {
+    padding: 10px 0px;
+    background-color: #000;
+    margin-top: 0;
+}
+.footer-top {
+    background-color: #1d1d1d;
+    background: radial-gradient(
+    circle farthest-corner at 30% 30%,
+    rgba(255, 255, 255, 0.2),
+    transparent 50%
+  ),
+  radial-gradient(
+    circle farthest-corner at 70% 70%,
+    rgba(0, 0, 0, 0.5),
+    transparent 60%
+  );   
+      color: #fff;
+    padding: 50px 20px;
+}
+.footer-bottom {
+    background-color: #f8f9fa;
+    padding: 30px 20px;
+    text-align: center;
+}
+.footer-title {
+    font-weight: bold;
+    color: #212529; /* Negro para los títulos */
+}
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}      
+
+  

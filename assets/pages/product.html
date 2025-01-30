@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/productos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-12 text-center text-light" style="background: black;"> 
+        <small>A Webflow membership template for resource websites. 
+            <a href="#" class="text-light">See all templates ></a></small> 
+      </div> 
+  
+      <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark justify-content-center sticky-top" style="background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)); height: 100px;">
+       <div class="container mx-5">
+         <a class="navbar-brand" href="#">
+           <img src="../images/miLogo.png" alt="Profile" class="img-fluid" width="60rem" height="40rem"> <span class="fw-bold">MG </span> 
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse rounded-pill" id="navbarNav">
+        <!-- Menu colapsao -->
+           <ul class="navbar-nav ms-auto text-center">
+             <li class="nav-item"><a class="nav-link mx-2" href="../../index.html">Inicio</a></li>
+             <li class="nav-item"><a class="nav-link mx-2" href="../pages/quienes.html">Quiénes somos</a></li>
+             <li class="nav-item"><a class="nav-link mx-2" href="../pages/product.html">Productos</a></li>
+             <li class="nav-item"><a class="nav-link mx-2" href="../pages/contact.html">Contacto</a></li>
+             <li class="nav-item"><a class="nav-link mx-2" href="../pages/nextgadgets.html">Próximos Gadgets</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav> 
+
+
+      <!-- Fondo general con gradiente -->
+      <div class="gradient-bg" style="min-height: 100vh;">
+        <!-- Encabezado de productos -->
+        <header class="text-center py-4">
+            <h1 class="display-6 fw-bold text-dark">Nuestros Productos</h1>
+            <p class="lead text-dark">Descubre los gadgets más innovadores diseñados para tu día a día.</p>
+        </header>
+
+       <!-- Category Navbar -->
+<div class="d-flex justify-content-center pb-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="min-width: 35vw;">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Todos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cerraduras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Proyectores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Herramientas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cargador solar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Sección de productos -->
+<section class="container py-4">
+  <div class="row g-5">
+      <!-- Producto 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow border-0" style="background: linear-gradient(to bottom, #f0f0f0, rgb(5, 5, 5)); border: 1px solid #ddd; max-height: 400px; max-width: 600px; border-radius: 10px;">
+            <div id="imagen">  
+              <img src="../images/producto.png" class="card-img-top img-fluid py-1" alt="Producto 1" style="max-height: 260px; object-fit: cover; border-radius: 10px;">
+            </div>  
+            <div class="card-body d-flex flex-column text-center text-light"  >
+                  <h5 class="card-title">Cerradura Inteligente</h5>
+                  <p class="card-text">Seguridad y comodidad.</p>
+                  <button class="btn btn-dark btn-modern align-self-center">Quick View</button>
+              </div>
+          </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+          <div class="card shadow border-0" style="background: linear-gradient(to bottom, #f0f0f0, rgb(5, 5, 5)); border: 1px solid #ddd; height: 400px; max-width: 600px; border-radius: 10px;">
+            <div id="imagen">
+              <img src="../images/producto2.png" class="card-img-top img-fluid py-1" alt="Producto 2" style="max-height: 260px; object-fit: cover; border-radius: 10px;">
+            </div>
+              
+              <div class="card-body d-flex flex-column text-center text-light">
+                  <h5 class="card-title">Mini Proyector Portátil</h5>
+                  <p class="card-text">Proyecciones en cualquier lugar.</p>
+                  <button class="btn btn-dark btn-modern align-self-center">Quick View</button>
+              </div>
+          </div>
+      </div>
+      <!-- Producto 3 -->
+      <div class="col-12 col-md-6 col-lg-4 pb-5">
+          <div class="card shadow border-0" style="background: linear-gradient(to bottom, #f0f0f0, rgb(5, 5, 5)); border: 1px solid #ddd; height: 400px; max-width: 600px; border-radius: 10px;">
+            <div id="imagen">
+              <img src="../images/producto3.png" class="card-img-top img-fluid py-1" alt="Producto 3" style="max-height: 280px; object-fit: cover; border-radius: 10px;">
+            </div>
+              <div class="card-body d-flex flex-column text-center text-light">
+                  <h5 class="card-title">Cargador Solar Compacto</h5>
+                  <p class="card-text">Energía limpia y portátil.</p>
+                  <button class="btn btn-dark btn-modern align-self-center">Quick View</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="footer-bottom bg-white text-dark">
+    <div class="container py-5 mt-2">
+        <div class="row justify-content-end">
+            <!-- Logo Section -->
+            <div class="col-12 col-md-5 text-center text-md-start">
+                <img src="../images/miLogo.png" width="40" height="20" alt="Memberbase Logo" class="img-fluid mx-1"><span class="fw-bold fs-6">Modern Gadgets</span>
+                <p class="text-muted mb-0">Built by Curro Correa.</p>
+                <p class="text-muted">Powered by UIVERSE.</p>
+                <p class="mb-0">© 2025 Memberbase. All Rights Reserved.</p>
+            </div>
+
+            <!-- Links Section -->
+            <div class="col-12 col-md-2 text-center text-md-start">
+                <h6 class="footer-title text-muted">WEBSITE</h6>
+                <ul class="list-unstyled">
+                    <li><a href="../../index.html" class="footer-link">Home</a></li>
+                    <li><a href="../pages/quienes.html" class="footer-link">Who we are?</a></li>
+                    <li><a href="../pages/product.html" class="footer-link">Products</a></li>
+                    <li><a href="../pages/contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="../pages/nextgadgets.html" class="footer-link">Next Gadgets</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-2 text-center text-md-start">
+                <h6 class="footer-title text-muted">MEMBERSHIP</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Sign In</a></li>
+                    <li><a href="#" class="footer-link">Sign Up</a></li>
+                    <li><a href="#" class="footer-link">User Account</a></li>
+                    <li><a href="#" class="footer-link">Reset Password</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-2 text-center text-md-start">
+                <h6 class="footer-title text-muted">ADMIN</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Style Guide</a></li>
+                    <li><a href="#" class="footer-link">Licenses</a></li>
+                    <li><a href="#" class="footer-link">Instructions</a></li>
+                    <li><a href="#" class="footer-link">Password</a></li>
+                    <li><a href="#" class="footer-link">404</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>

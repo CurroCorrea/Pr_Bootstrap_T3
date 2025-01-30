@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*Navbar*/
+
+@media (max-width: 991.98px) { /* Para pantallas menores a 'md' */
+    
+    .navbar-collapse.show {
+      background-color: black; /* Fondo negro solo cuando el menú está desplegado */
+      transition: background-color 0.3s ease-in-out; /* Transición suave (opcional) */
+    }
+    .navbar-collapse.show .nav-link {
+        color: white !important; /* Cambia el color de las letras a blanco */
+        transition: color 0.3s ease-in-out; /* Transición suave del color de texto */
+      }
+  
+      
+  }
+
+  .gradient-bg {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 1%, rgba(26, 26, 26, 0.8) 40%);
+    min-height: 100vh;
+}
+.contact-card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+.form-control{
+    background-color: transparent;
+}
+.form-card {
+    background-color: transparent;
+    padding: 50px;
+    border-radius: 10px;
+}
+.icon-link {
+    color: #000;
+    transition: color 0.3s ease;
+}
+.icon-link:hover {
+    color: #fff;
+}
+
+.contact-card, .form-card {
+  position: relative;
+  overflow: hidden; /* Evita que la animación sobresalga */
+  border: 2px solid transparent;
+}
+
+.contact-card::before, .form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgb(217, 202, 202); /* Color del borde animado */
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Inicialmente oculta */
+  animation: border-animate 6s linear infinite; /* Animación de borde */
+  pointer-events: none; /* Evita que bloquee la interacción */
+
+}
+
+@keyframes border-animate {
+  0% { clip-path: polygon(0 0, 0 0, 0 0, 0 0); }  /* Inicio */
+  25% { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); } /* Línea arriba */
+  50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%); } /* Derecha */
+  75% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Abajo */
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0); } /* Cierra el recorrido */
+}
+
+
+/* FOOTER */
+
+.footer-bottom {
+  background-color: #f8f9fa;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer-title {
+  font-weight: bold;
+  color: #212529; /* Negro para los títulos */
+}
+.footer-link {
+  text-decoration: none; /* QUITA el subrayado */	
+  color: inherit; /*Elimina el color de los enlaces*/
+}
+.footer-link:hover {
+  text-decoration: underline;
+}      
+
+
+
+
+
+

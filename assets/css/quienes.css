@@ -1,0 +1,67 @@
+/* Hace que el cálculo del tamaño de los elementos sea más predecible.
+Evita problemas de overflow inesperado, especialmente con padding y bordes.
+Mejora la compatibilidad entre navegadores y facilita el diseño responsivo. */ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*Navbar*/
+
+@media (max-width: 991.98px) { /* Para pantallas menores a 'md' */
+    
+    .navbar-collapse.show {
+      background-color: black; /* Fondo negro solo cuando el menú está desplegado */
+      transition: background-color 0.3s ease-in-out; /* Transición suave (opcional) */
+    }
+    .navbar-collapse.show .nav-link {
+        color: white !important; /* Cambia el color de las letras a blanco */
+        transition: color 0.3s ease-in-out; /* Transición suave del color de texto */
+      }
+  
+      
+  }
+
+
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;       /* Asegura que el video tome el ancho completo de la pantalla */
+    height: 100vh;      /* Asegura que el video tome el alto completo de la pantalla */
+    object-fit: cover;  /* Escala el video para cubrir el contenedor sin distorsionar */
+    min-width: 100%;    /* Previene bordes en pantallas amplias */
+    min-height: 100%;   /* Previene bordes en pantallas altas */
+    z-index: -1; /* para que esté detrás del contenido */
+}
+
+/* Opcional: para el fondo del menú */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+ /* Botón para activar el audio */
+ .audio-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10; /* Mantiene el botón por encima del contenido */
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;    /* Cambia el cursor al icono de "mano" para indicar que es un elemento clicable */
+    opacity: 1;              /* Define la opacidad del botón (1 significa totalmente visible) */
+    transition: opacity 0.5s; /* Establece una transición de 0.5 segundos para suavizar el cambio en opacidad cuando se modifique */     
+}
+
+ /* Sección de contenido adicional */
+ .extra-content {
+    margin-top: 100vh; /* Empieza después de la altura del video */
+    padding: 50px;
+    background-color: #000000;
+    color: white;
+}

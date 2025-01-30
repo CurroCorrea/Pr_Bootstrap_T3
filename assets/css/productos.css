@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Navbar*/
+
+@media (max-width: 991.98px) { /* Para pantallas menores a 'md' */
+    
+    .navbar-collapse.show {
+      background-color: black; /* Fondo negro solo cuando el menú está desplegado */
+      transition: background-color 0.3s ease-in-out; /* Transición suave (opcional) */
+    }
+    .navbar-collapse.show .nav-link {
+        color: white !important; /* Cambia el color de las letras a blanco */
+        transition: color 0.3s ease-in-out; /* Transición suave del color de texto */
+      }
+  
+  }
+
+  /* Gradient Text for Modern Title */
+.gradient-title {
+  background: linear-gradient(to left, #5e3a0b, #000000);
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  display: inline-block; /* Ensure the gradient applies correctly */
+  font-weight: 700; /* Bold font for emphasis */
+  letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+  
+}
+
+  /* Modern Button styles */
+.btn-modern {
+  width: 150px;
+  border-radius: 25px;
+  padding: 12px 24px;
+  background: linear-gradient(to top, #f39923, #210e0e); /* Gradient for a modern look */
+  color: white;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.5s ease;
+  margin: 10px 0;
+}
+
+.btn-modern:hover {
+  background: linear-gradient(to right, #010000, #f39923); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+  /* Estilo del contenedor de la imagen */
+#imagen {
+  overflow: hidden; /* Evita que la imagen se salga del contenedor */
+  position: relative; /* Necesario para posicionar la imagen de forma absoluta */
+  max-width: 600px; /* Ajusta el ancho máximo del contenedor */
+  height: 500px; /* Altura fija del contenedor */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Imagen base */
+#imagen img {
+  overflow: hidden;
+  position: absolute; /* La imagen no afecta las dimensiones del contenedor */
+  top: 0;
+  left: 0;
+  width: 100%; /* La imagen ocupa el ancho del contenedor */
+  height: 100%; /* La imagen ocupa la altura del contenedor */
+  max-height: 100%;
+  transition: transform 0.5s ease; /* Suaviza el efecto de zoom */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente dentro del contenedor */
+}
+
+/* Efecto de zoom al pasar el cursor */
+#imagen:hover img {
+  transform: scale(1.1); /* Escala la imagen al 120% */
+}
+
+        /* Letras: Nuestros Productos */
+        .gradient-bg {
+            background: linear-gradient(to bottom, rgb(178, 167, 167), black);
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .category-nav {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .category-nav .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        .category-nav .nav-link.active, .category-nav .nav-link:hover {
+            color: white;
+        }
+
+/* FOOTER */
+
+.footer-bottom {
+  background-color: #f8f9fa;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer-title {
+  font-weight: bold;
+  color: #212529; /* Negro para los títulos */
+}
+.footer-link {
+  text-decoration: none; /* QUITA el subrayado */	
+  color: inherit; /*Elimina el color de los enlaces*/
+}
+.footer-link:hover {
+  text-decoration: underline;
+}      
+
