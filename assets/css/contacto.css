@@ -22,7 +22,7 @@
   }
 
   .gradient-bg {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 1%, rgba(26, 26, 26, 0.8) 40%);
+    background: radial-gradient(circle, rgba(211, 203, 203, 0.9) 1%, rgba(26, 26, 26, 0.8) 40%);
     min-height: 100vh;
 }
 .contact-card {
